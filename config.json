@@ -1,0 +1,122 @@
+{
+    "log": {
+        "access": "/var/log/v2ray/access.log",
+        "error": "/var/log/v2ray/error.log",
+        "loglevel": "warning"
+    },
+    "inbound": {
+        "port": 1234,
+        "protocol": "vmess",
+        "settings": {
+            "clients": [
+        {
+	  "id": "d4170580-bb73-40f7-8d67-f9f04016f816",
+          "level": 1,
+          "alterId": 0
+        },
+        {
+	  "id": "edddba19-e094-4caa-849c-2347f8f59788",
+          "level": 1,
+          "alterId": 0
+        },
+        {
+	  "id": "89482d36-658a-49b7-802e-0e423f8f5aa6",
+          "level": 1,
+          "alterId": 0
+        },
+        {
+	  "id": "67608639-f230-4501-9874-119df19cc642",
+          "level": 1,
+          "alterId": 0
+        },
+        {
+	  "id": "4e123d02-8f76-40c4-bb8b-e180a141f41f",
+          "level": 1,
+          "alterId": 0
+        },
+        {
+	  "id": "1016478f-bf21-4f4b-b691-99ef98f515ad",
+          "level": 1,
+          "alterId": 0
+        },
+        {
+	  "id": "1ea68e37-b802-4fa0-9299-c2b4e3c2b122",
+          "level": 1,
+          "alterId": 0
+        },
+        {
+	  "id": "0989f737-e198-4599-966e-8f970976e143", 
+          "level": 1,
+          "alterId": 0
+        },
+        {
+	  "id": "c00014bd-477f-4b8e-8a32-80b3b432ac80", 
+          "level": 1,
+          "alterId": 0
+        },
+        {
+	  "id": "b9ded699-77aa-4e44-82dd-d098c6ca25dc", 
+          "level": 1,
+          "alterId": 0
+        },
+        {
+	  "id": "574c8c16-66d7-4a24-b07e-fbecac488066", 
+          "level": 1,
+          "alterId": 0
+        },
+        {
+	  "id": "62d18e17-9f17-45ca-8774-398bab94407e", 
+          "level": 1,
+          "alterId": 0
+        }
+            ]
+        },
+        "streamSettings": {
+            "network": "ws",
+            "wsSettings": {
+            "path": "/cocoinfo"
+           }
+	}
+    },
+    "outbound": {
+        "protocol": "freedom",
+        "settings": {}
+    },
+    "inboundDetour": [],
+    "outboundDetour": [
+        {
+            "protocol": "blackhole",
+            "settings": {},
+            "tag": "blocked"
+        }
+    ],
+    "routing": {
+        "strategy": "rules",
+        "settings": {
+            "rules": [
+                {
+                    "type": "field",
+                    "ip": [
+                        "0.0.0.0/8",
+                        "10.0.0.0/8",
+                        "100.64.0.0/10",
+                        "127.0.0.0/8",
+                        "169.254.0.0/16",
+                        "172.16.0.0/12",
+                        "192.0.0.0/24",
+                        "192.0.2.0/24",
+                        "192.168.0.0/16",
+                        "198.18.0.0/15",
+                        "198.51.100.0/24",
+                        "203.0.113.0/24",
+                        "::1/128",
+                        "fc00::/7",
+                        "fe80::/10"
+                    ],
+                    "outboundTag": "blocked"
+                }
+            ]
+        }
+    }
+}
+
